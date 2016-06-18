@@ -1,0 +1,105 @@
+<!--
+//THURRSDAY, 6/17/16 - SATURDAY, 6/19/16
+//SECTION #2
+//(#5)HALFWAY HACKATHON
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Hackathon Page</title>
+    <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+    <style>
+    body { background-color: orange; } .hidden { display: none; } .shown { display: unset; } h1 { font-size: 35px; font-family: Georgia; } h3 { font-size: 25px; margin: 0px 0px 20px 0px; font-family: Arial; color: #660000; } ul { font-family: "Comic Sans MS"; list-style-position: inside; padding-left: 0; } .facts { font-family: Arial; font-weight: bold; font-size: 18px; margin: 15px 0px 0px 0px; color: #800000; }
+    </style>
+</head>
+
+<body>
+    <h1>Fearsome Foursomes</h1>
+    <h3>Teenage Mutant Ninja Turtles</h3>
+    <img class="shown" id="turtles" width="275" height="220" src="http://images-cdn.moviepilot.com/image/upload/c_fill,h_1080,w_1440/t_mp_quality/3014649-cast-of-teenage-mutant-ninja-turtles-5-the-teenage-mutant-ninja-turtles-trailer-just-dropped-get-the-pizza-teenage-mutant-ninja-tur-jpeg-46061.jpg">
+    <img class="hidden" id="pizzabox" width="275" height="220" src="https://s-media-cache-ak0.pinimg.com/236x/f1/09/b3/f109b3f5aa5e5f2cf59ccf405280ad04.jpg">
+    <p class="facts">Turtles Fun Facts</p>
+    <ul>
+        <li>The Ninja Turtles were named after Italian Renaissance artists.</li>
+        <li>The Ninja Turtles started as a parody of Daredevil.</li>
+        <li>The martial art discipline the Turtles practice is called ninjutsu.</li>
+        <li>Turtles have no outer ears. Instead, they have excellent sight and smell.</li>
+        <li>The Shredder, the Turtles archvillain, was inspired by a cheese grater.</li>
+        <li>April O'Neil isn't human! Her father drew a sketch of the daughter he wanted to have, and a magic crystal brought her to life!</li>
+    </ul>
+    <h3>Fantastic Four</h3>
+    <img class="shown" id="fan4" width="275" height="220" src="http://static2.businessinsider.com/image/5327148eecad044743a6d9e2-549-411/fantastic-four.png">
+    <img class="hidden" id="clobber" width="275" height="220" src="http://i.ebayimg.com/images/g/4xgAAOSweW5VAyOJ/s-l300.jpg">
+    <p class="facts">Fantastic Four Fun Facts</p>
+    <ul>
+        <li>The Fantastic Four was drawn up to rival DC's The Justice League.</li>
+        <li>Cosmic rays from outer space gave the heroes their powers.</li>
+        <li>At one point or another, each member of the Fantastic Four has died. Reed was presumed dead after a battle with Doctor Doom, Sue was killed due to a mistake by Johnny Storm which he later made right with time travel, and he too was believed dead after facing Annihilus' army alone in the Negative Zone. The Thing was killed by a horrified Reed when Ben's body was taken over by Doom.</li>
+        <li>Spider-Man once tried to join the team.</li>
+        <li>Reed and Sue's daughter, Valeria, was named by Doctor Doom.</li>
+    </ul>
+    <h3>Black Eyed Peas</h3>
+    <img class="shown" id="peas" width="275" height="220" src="http://www.theplace2.ru/archive/black_eyed_peas/img/54731_celebrity_para.jpg">
+    <img class="hidden" id="album" width="275" height="220" src="http://lossless-galaxy.ru/uploads/posts/2010-03/1268713773_f818b23e941a.jpg">
+    <p class="facts">Black Eyed Peas Fun Facts</p>
+    <ul>
+        <li>They began as a hip-hop band that tried to keep their music fun, basing their sound on the records made before Gangsta Rap. They developed a loyal following, but didn't have big commercial success until they added Fergie and made their songs more radio-friendly.</li>
+        <li>Will.i.am's real name is William James Adams Jr. (formally known as will.1.x). He hosted a show on MTV2 and started his own clothing line called I.Am clothing. He's a Jamaican and the producer and lead rapper of the band.</li>
+        <li>Fergie's real name is Stacy Ferguson. When she was young, she was on a show called Kids Incorporated, about a bunch of kids in a band.</li>
+        <li>Taboo's real name is Jamie Gomez and he is Latino. Apl.de.Ap's real name is Allan Pineda Lindo and he is Filipino.</li>
+    </ul>
+    <br>
+    <h3>There's no place like home...</h3>
+    <img class="shown" id="dorothy" width="275" height="220" src="http://c.o0bg.com/rf/image_r/Boston/2011-2020/2011/10/12/BostonGlobe.com/Arts/Images/HS-199801.jpg">
+    <img class="hidden" id="witch" width="275" height="220" src="https://hiddenhistoryofoz.files.wordpress.com/2013/10/wicked_witch.jpg?w=390&h=293">
+    <p class="facts">Wizard of Oz Fun Facts</p>
+    <ul>
+        <li>The studio, Metro-Goldwyn Meyer, outbid 20th Century Fox for the movie rights. Fox had wanted Shirley Temple to star.</li>
+        <li>The Tin Man's oil was actually chocolate syrup.</li>
+        <li>Judy Garland's daughter, Liza Minelli, was married to Jack Haley, Jr., the son of the actor who played the Tin Man.</li>
+        <li>Toto was played by a female dog named Terry.</li>
+        <li>Margaret Hamilton was a kindergarten teacher before becoming an actress.</li>
+        <li>Baum apparently invented the name "Oz" when looking at an alphabetical filing cabinet label, "O-Z."</li>
+    </ul>
+    <iframe width="0" height="0" src="https://www.youtube.com/embed/bojx9BDpJks?rel=0&autoplay=1&end=25" frameborder="0" allowfullscreen id="video"></iframe>
+    </video>
+    <script>
+    var randomColor = '#' + Math.random().toString(16).slice(2, 8);
+    $('body').css('background-color', randomColor);
+    $('#turtles').on('click', function() {
+        $('#turtles').addClass('hidden').removeClass('shown');
+        $('#pizzabox').addClass('shown').removeClass('hidden');
+    });
+    $('#pizzabox').on('click', function() {
+        $('#pizzabox').addClass('hidden').removeClass('shown');
+        $('#turtles').addClass('shown').removeClass('hidden');
+    });
+    $('#fan4').on('click', function() {
+        $('#fan4').addClass('hidden').removeClass('shown');
+        $('#clobber').addClass('shown').removeClass('hidden');
+    });
+    $('#clobber').on('click', function() {
+        $('#clobber').addClass('hidden').removeClass('shown');
+        $('#fan4').addClass('shown').removeClass('hidden');
+    });
+    $('#peas').on('click', function() {
+        $('#peas').addClass('hidden').removeClass('shown');
+        $('#album').addClass('shown').removeClass('hidden');
+    });
+    $('#album').on('click', function() {
+        $('#album').addClass('hidden').removeClass('shown');
+        $('#peas').addClass('shown').removeClass('hidden');
+    });
+    $('#dorothy').on('click', function() {
+        $('#dorothy').addClass('hidden').removeClass('shown');
+        $('#witch').addClass('shown').removeClass('hidden');
+    });
+    $('#witch').on('click', function() {
+        $('#witch').addClass('hidden').removeClass('shown');
+        $('#dorothy').addClass('shown').removeClass('hidden');
+    });
+    </script>
+</body>
+
+</html>
